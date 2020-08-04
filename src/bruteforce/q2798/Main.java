@@ -19,8 +19,8 @@ public class Main {
     private static int findNum(int[] arr, int max) {
         int nearbyMax = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
+        for (int i = 0; i < arr.length - 2; i++) {
+            for (int j = i + 1; j < arr.length - 1; j++) {
                 for (int k = j + 1; k < arr.length; k++) {
                     int sum =  arr[i] + arr[j] + arr[k];
                     if ((nearbyMax < sum) && (sum <= max)) {
