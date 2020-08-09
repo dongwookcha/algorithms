@@ -1,4 +1,4 @@
-package dynamicprogramming.part1.q1463;
+package dp.part1.q1463;
 
 import java.util.Scanner;
 

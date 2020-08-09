@@ -1,4 +1,4 @@
-package dynamicprogramming.part1.q11727;
+package dp.part1.q11726;
 
 import java.util.Scanner;
 
@@ -12,11 +12,10 @@ public class Main {
     }
 
     private static int dp(int n) {
-        if (n == 1) return 1;
-        if (n == 2) return 3;
+        if (n <= 2) return n;
         if (d[n] > 0) return d[n];
 
-        d[n] = dp(n - 1) + 2 * dp(n - 2);
+        d[n] = dp(n - 1) + dp(n - 2);
         d[n] %= 10007;
 
         return d[n];

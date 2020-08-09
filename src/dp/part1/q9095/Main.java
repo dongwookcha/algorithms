@@ -1,4 +1,4 @@
-package dynamicprogramming.part1.q9095;
+package dp.part1.q9095;
 
 import java.util.Scanner;
 
