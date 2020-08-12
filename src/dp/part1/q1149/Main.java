@@ -1,6 +1,5 @@
 package dp.part1.q1149;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -25,9 +24,6 @@ public class Main {
             d[i][2] = Math.min(d[i-1][1], d[i-1][0]) + a[i][2];
         }
 
-        for (int i = 0; i <= n; i++) {
-            System.out.println(Arrays.toString(d[i]));
-        }
         System.out.println(Math.min(Math.min(d[n][0], d[n][1]), d[n][2]));
     }
 }
