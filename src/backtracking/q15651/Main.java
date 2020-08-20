@@ -10,22 +10,26 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        recursion(0, n, m);
+        System.out.print(recursion(0, n, m));
     }
 
-    public static void recursion(int index, int n, int m) {
+    public static StringBuilder recursion(int index, int n, int m) {
+        StringBuilder sb = new StringBuilder();
+
         if(index == m) {
             for(int i = 0; i < m; i++) {
-                System.out.print(a[i]);
-                if(i != m -1) System.out.print(' ');
+                sb.append(a[i]);
+                if(i != m -1) sb.append(' ');
             }
-            System.out.println();
-            return;
+            sb.append('\n');
+            return sb;
         }
 
+        StringBuilder ans = new StringBuilder();
         for(int i = 1; i <= n; i++) {
             a[index] = i;
-            recursion(index + 1, n, m);
+            ans.append(recursion(index + 1, n, m));
         }
+        return ans;
     }
 }

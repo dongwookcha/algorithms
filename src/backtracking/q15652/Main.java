@@ -1,8 +1,9 @@
 package backtracking.q15652;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-// 선택
+// 선택 O(N^2) - 정확하게 이해는 안됨
 public class Main {
     static int[] a = new int[10];
 
@@ -15,11 +16,12 @@ public class Main {
 
     public static void selection(int index, int selected, int n, int m) {
         if(selected == m) {
-            for(int i = 0; i < m; i++) {
-                System.out.print(a[i]);
-                if(i != m -1) System.out.print(' ');
-            }
-            System.out.println();
+            System.out.println(Arrays.toString(a));
+//            for(int i = 0; i < m; i++) {
+//                System.out.print(a[i]);
+//                if(i != m -1) System.out.print(' ');
+//            }
+//            System.out.println();
             return;
         }
 
@@ -33,9 +35,8 @@ public class Main {
     }
 }
 
-// 순서
+// 순서 O(N!)
 //public class Main {
-//    static boolean[] c = new boolean[10];
 //    static int[] a = new int[10];
 //
 //    public static void main(String[] args) {
