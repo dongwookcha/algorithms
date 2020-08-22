@@ -27,8 +27,6 @@ public class Main {
     public static void solution(int day, int sum, int n) {
         if(n+1 == day) {
             if(ans < sum) {
-                System.out.println("ans: " + ans);
-                System.out.println("sum: " + sum);
                 ans = sum;
             }
             return;
