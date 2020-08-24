@@ -25,7 +25,7 @@ public class DFS {
     public static void DFS_M(int x) {
         check[x] = true;
         for(int i = 0; i <= n; i++) {
-            if(a[x][i] == 1 && check[i] == false) {
+            if(a[x][i] == 1 && !check[i]) {
                 DFS_M(i);
             }
         }
@@ -36,7 +36,7 @@ public class DFS {
         check[x] = true;
         for(int i = 0; i < g[x].size(); i++) {
             int y = a[x][i];
-            if(check[y] == false) {
+            if(!check[y]) {
                 DFS_L(y);
             }
         }
